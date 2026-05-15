@@ -4,7 +4,7 @@
 const pages = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('[data-page]');
 
-function navigateTo(pageId) {
+function navigateTo(pageId, fromSearch = false) {
   pages.forEach(p => p.classList.remove('active'));
   const target = document.getElementById(pageId);
   if (target) {
@@ -16,6 +16,15 @@ function navigateTo(pageId) {
   });
   // Update URL hash
   history.pushState({ page: pageId }, '', '#' + pageId);
+
+  // Clear search on navigation
+  if (!fromSearch) {
+    const searchInput = document.getElementById('navSearchInput');
+    if (searchInput) {
+      searchInput.value = '';
+      document.querySelectorAll('.blog-card').forEach(card => card.style.display = '');
+    }
+  }
 }
 
 // Handle browser back/forward
@@ -75,7 +84,7 @@ if (navSearchInput) {
     // Si estamos en otra página, navegar a home
     const homePage = document.getElementById('home');
     if (!homePage.classList.contains('active')) {
-      navigateTo('home');
+      navigateTo('home', true);
     }
     performSearch(navSearchInput.value);
   });
@@ -86,7 +95,7 @@ if (navSearchInput) {
       e.preventDefault(); // Prevenir comportamiento por defecto
       const homePage = document.getElementById('home');
       if (!homePage.classList.contains('active')) {
-        navigateTo('home');
+        navigateTo('home', true);
       }
       setTimeout(() => {
         const blogSection = document.getElementById('blog-section');
