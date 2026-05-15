@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechBlog - Desarrollo de aplicaciones en red</title>
+    <meta name="description" content="Un blog interactivo sobre desarrollo web, APIs y microservicios.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- HEADER / NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <a href="#" data-page="home" class="logo">
+            <span class="logo-icon">🚀</span>
+            <span>TechBlog</span>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+        <ul class="nav-links" id="navList">
+            <li class="nav-search">
+                <input type="text" id="navSearchInput" placeholder="Buscar artículo..." class="nav-search-input">
+            </li>
+            <li><a href="#" data-page="home" class="active">Inicio</a></li>
+            <li><a href="#" data-page="about">Sobre el Autor</a></li>
+            <li><a href="https://github.com/andresisfx?tab=repositories" target="_blank" class="nav-btn">GitHub</a></li>
+        </ul>
+    </nav>
+
+    <!-- HOME PAGE -->
+    <main id="home" class="page active">
+        <!-- HERO -->
+        <header class="hero">
+            <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=1920&q=80')"></div>
+            <div class="hero-orb orb-1"></div>
+            <div class="hero-orb orb-2"></div>
+            <div class="hero-content">
+                <div class="hero-badge">⚡ Desarrollo de aplicaciones en red</div>
+                <h1>Explorando el <span class="gradient-text">Código</span></h1>
+                <p>Descubre las mejores prácticas, arquitecturas modernas y todo lo necesario para dominar el desarrollo web.</p>
+                <div class="hero-cta">
+                    <a href="#blog-section" class="btn-primary" onclick="document.getElementById('blog-section').scrollIntoView(); return false;">Leer Artículos</a>
+                    <a href="#" data-page="about" class="btn-secondary">Sobre Mí</a>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- BLOG GRID -->
+        <section class="section" id="blog-section">
+            <div class="section-header">
+                <h2>Últimas Publicaciones</h2>
+                <p>Artículos técnicos, tutoriales y reflexiones sobre la integración de sistemas y el desarrollo moderno.</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <article class="blog-card" data-goto="post1">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=600&q=80" alt="APIs REST" class="card-image">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-purple">API</span>
+                            <span class="tag tag-cyan">Backend</span>
+                        </div>
+                        <h3>Introducción a las API REST</h3>
+                        <p>Descubre qué son las API REST, cómo funcionan los métodos HTTP (GET, POST, PUT, DELETE) y por qué son fundamentales para conectar sistemas en la actualidad.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Autor" class="author-avatar">
+                                <span class="author-name">Andrés Rodríguez</span>
+                            </div>
+                            <span class="card-date">15 May 2026</span>
+                        </div>
+                        <span class="read-more">Leer artículo completo →</span>
+                    </div>
+                </article>
+
+                <!-- Post 2 -->
+                <article class="blog-card" data-goto="post2">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Frontend y Backend" class="card-image">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-pink">Frontend</span>
+                            <span class="tag tag-cyan">Integración</span>
+                        </div>
+                        <h3>Conectando el Frontend con el Backend</h3>
+                        <p>Aprende cómo las interfaces de usuario modernas (HTML, CSS, JS) se comunican con los servidores mediante peticiones asíncronas usando la API Fetch.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Autor" class="author-avatar">
+                                <span class="author-name">Andrés Rodríguez</span>
+                            </div>
+                            <span class="card-date">10 May 2026</span>
+                        </div>
+                        <span class="read-more">Leer artículo completo →</span>
+                    </div>
+                </article>
+
+                <!-- Post 3 -->
+                <article class="blog-card" data-goto="post3">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=600&q=80" alt="MVC Architecture" class="card-image">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-purple">Patrones</span>
+                            <span class="tag tag-pink">MVC</span>
+                        </div>
+                        <h3>Patrón de Arquitectura MVC</h3>
+                        <p>Descubre el Modelo-Vista-Controlador (MVC), uno de los patrones de arquitectura de software más utilizados para organizar y estructurar el código de tus aplicaciones web.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Autor" class="author-avatar">
+                                <span class="author-name">Andrés Rodríguez</span>
+                            </div>
+                            <span class="card-date">05 May 2026</span>
+                        </div>
+                        <span class="read-more">Leer artículo completo →</span>
+                    </div>
+                </article>
+
+                <!-- Post 4 -->
+                <article class="blog-card" data-goto="post4">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=600&q=80" alt="HTML5 Code" class="card-image">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-cyan">Frontend</span>
+                            <span class="tag tag-purple">Estructura</span>
+                        </div>
+                        <h3>Lenguaje de marcado HTML 5</h3>
+                        <p>Descubre los fundamentos de HTML5, la última versión del lenguaje de marcado que da estructura y semántica a toda la información de la web moderna.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Autor" class="author-avatar">
+                                <span class="author-name">Andrés Rodríguez</span>
+                            </div>
+                            <span class="card-date">20 May 2026</span>
+                        </div>
+                        <span class="read-more">Leer artículo completo →</span>
+                    </div>
+                </article>
+
+                <!-- Post 5 -->
+                <article class="blog-card" data-goto="post5">
+                    <div class="card-image-wrap">
+                        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=600&q=80" alt="CSS Styling" class="card-image">
+                    </div>
+                    <div class="card-body">
+                        <div class="card-tags">
+                            <span class="tag tag-pink">Diseño</span>
+                            <span class="tag tag-cyan">Frontend</span>
+                        </div>
+                        <h3>Introducción a hojas de estilo CSS</h3>
+                        <p>Aprende cómo CSS transforma el texto aburrido en interfaces atractivas, responsivas y animadas, mejorando la experiencia del usuario final.</p>
+                        <div class="card-footer">
+                            <div class="card-author">
+                                <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Autor" class="author-avatar">
+                                <span class="author-name">Andrés Rodríguez</span>
+                            </div>
+                            <span class="card-date">25 May 2026</span>
+                        </div>
+                        <span class="read-more">Leer artículo completo →</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- POST 1 PAGE -->
+    <main id="post1" class="page">
+        <header class="post-header">
+            <div class="post-header-inner">
+                <div class="card-tags" style="justify-content: center; margin-bottom: 1rem;">
+                    <span class="tag tag-purple">API</span>
+                    <span class="tag tag-cyan">Backend</span>
+                </div>
+                <h1>Introducción a las API REST</h1>
+                <p class="lead">Descubre qué son las API REST, cómo funcionan y por qué son fundamentales para conectar sistemas en la actualidad.</p>
+                <div class="post-meta">
+                    <div class="post-meta-item">
+                        <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Andrés Rodríguez" class="author-avatar" style="width: 24px; height: 24px;">
+                        <span>Andrés Rodríguez</span>
+                    </div>
+                    <div class="post-meta-item"><span>📅 15 May 2026</span></div>
+                    <div class="post-meta-item"><span>⏱️ 5 min de lectura</span></div>
+                </div>
+            </div>
+        </header>
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1200&q=80" alt="API Server" class="post-hero-img">
+        <article class="post-content">
+            <h2>¿Qué es una API REST?</h2>
+            <p>Una <strong>API</strong> (Interfaz de Programación de Aplicaciones) permite que dos aplicaciones de software se comuniquen entre sí. <strong>REST</strong> (Transferencia de Estado Representacional) es un estilo de arquitectura de software para sistemas hipermedia distribuidos, como la World Wide Web.</p>
+            <p>Las API RESTful se basan en la arquitectura cliente-servidor y utilizan el protocolo HTTP para comunicarse. Son la columna vertebral de las aplicaciones web modernas, permitiendo separar la interfaz de usuario (Frontend) de la lógica de negocio y datos (Backend).</p>
+            
+            <p>Para entenderlo mejor, imagina un restaurante. Tú eres el cliente (Frontend), la cocina es el servidor (Backend) y el mesero es la API. Tú no puedes ir directamente a la cocina a prepararte la comida; necesitas al mesero para llevar tu pedido a la cocina y luego traerte tu plato. Una API funciona exactamente igual: toma tu petición, se la lleva al sistema que sabe cómo procesarla y te devuelve una respuesta.</p>
+
+            <div class="info-box">
+                <p><strong>Nota importante:</strong> Una API no tiene interfaz gráfica de usuario. Devuelve datos crudos (generalmente en formato JSON o XML) que luego son procesados y mostrados por otra aplicación.</p>
+            </div>
+
+            <h3>Principios Básicos de REST</h3>
+            <p>Para que una API se considere verdaderamente "RESTful", debe cumplir con ciertos principios fundamentales:</p>
+            <ul>
+                <li><strong>Cliente-Servidor:</strong> El cliente y el servidor son completamente independientes.</li>
+                <li><strong>Sin Estado (Stateless):</strong> Cada petición del cliente al servidor debe contener toda la información necesaria para entenderla. El servidor no guarda el contexto o sesiones entre peticiones en la memoria del servidor.</li>
+                <li><strong>Cacheable:</strong> Las respuestas deben poder ser almacenadas en caché para mejorar el rendimiento y reducir la carga de la red.</li>
+                <li><strong>Interfaz Uniforme:</strong> Se utilizan recursos estándar identificados mediante URLs limpias (por ejemplo, <code>/api/usuarios</code>).</li>
+            </ul>
+
+            <h3>Métodos HTTP Principales</h3>
+            <p>En REST, las acciones que queremos realizar sobre los recursos se definen usando los verbos HTTP estándar:</p>
+            <ul>
+                <li><strong>GET (Lectura):</strong> Se utiliza para recuperar o consultar datos del servidor. Nunca modifica la base de datos.</li>
+                <li><strong>POST (Creación):</strong> Se utiliza para enviar datos al servidor para crear un nuevo recurso (ej. registrar un nuevo usuario).</li>
+                <li><strong>PUT / PATCH (Actualización):</strong> Se utilizan para actualizar datos existentes en el servidor. PUT reemplaza todo el recurso, PATCH actualiza parcialmente.</li>
+                <li><strong>DELETE (Borrado):</strong> Se utiliza para eliminar un recurso del servidor.</li>
+            </ul>
+
+            <h3>Códigos de Estado HTTP</h3>
+            <p>Además de enviar datos, el servidor responde a tu API con un código numérico estándar que indica el resultado de la operación. Es crucial manejarlos bien:</p>
+            <ul>
+                <li><strong>200 OK:</strong> La petición fue exitosa y todo salió bien.</li>
+                <li><strong>201 Created:</strong> El recurso fue creado correctamente (típicamente se devuelve tras un POST exitoso).</li>
+                <li><strong>400 Bad Request:</strong> La petición del cliente tiene un error de sintaxis o le faltan datos requeridos.</li>
+                <li><strong>404 Not Found:</strong> El recurso o la URL que estás buscando no existe en el servidor.</li>
+                <li><strong>500 Internal Server Error:</strong> Ocurrió un error inesperado o no controlado en el servidor Backend.</li>
+            </ul>
+
+            <h3>Ejemplo Práctico de Petición</h3>
+            <p>Si queremos obtener una lista de usuarios de nuestra base de datos, la petición HTTP en crudo podría verse así:</p>
+            
+            <div class="code-block">
+                <span class="lang-tag">HTTP</span>
+<pre><code><span class="kw">GET</span> <span class="str">/api/usuarios</span> HTTP/1.1
+<span class="cm">Host: api.midominio.com</span>
+<span class="cm">Accept: application/json</span>
+<span class="cm">Authorization: Bearer mi_token_seguro</span></code></pre>
+            </div>
+
+            <p>El servidor procesaría esta petición y respondería con un código <code>200 OK</code> y un cuerpo de mensaje en formato JSON conteniendo todos los datos solicitados. Este enfoque estandarizado es la magia que permite que diferentes aplicaciones web, móviles (iOS/Android) y sistemas de escritorio puedan consumir el mismo Backend sin ningún problema de compatibilidad.</p>
+            
+            <div class="post-nav">
+                <a href="#" data-nav="home">← Volver al Inicio</a>
+                <a href="#" data-nav="post2">Siguiente Artículo: Frontend y Backend →</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- POST 2 PAGE -->
+    <main id="post2" class="page">
+        <header class="post-header">
+            <div class="post-header-inner">
+                <div class="card-tags" style="justify-content: center; margin-bottom: 1rem;">
+                    <span class="tag tag-pink">Frontend</span>
+                    <span class="tag tag-cyan">Integración</span>
+                </div>
+                <h1>Conectando Frontend y Backend</h1>
+                <p class="lead">Aprende cómo las interfaces interactúan con el servidor mediante peticiones asíncronas.</p>
+                <div class="post-meta">
+                    <div class="post-meta-item">
+                        <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Andrés Rodríguez" class="author-avatar" style="width: 24px; height: 24px;">
+                        <span>Andrés Rodríguez</span>
+                    </div>
+                    <div class="post-meta-item"><span>📅 10 May 2026</span></div>
+                    <div class="post-meta-item"><span>⏱️ 6 min de lectura</span></div>
+                </div>
+            </div>
+        </header>
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Code on Screen" class="post-hero-img">
+        <article class="post-content">
+            <h2>La Separación de Responsabilidades</h2>
+            <p>En el desarrollo web moderno, es común dividir un proyecto en dos partes principales: el <strong>Frontend</strong> (la parte que el usuario ve y con la que interactúa) y el <strong>Backend</strong> (la lógica del servidor y la base de datos).</p>
+            <p>Esta separación no solo permite a los equipos trabajar de forma independiente en sus respectivas áreas, sino que también facilita enormemente la escalabilidad de la arquitectura. Por ejemplo, si tu aplicación web resulta ser un éxito y necesitas lanzar una aplicación móvil en el futuro, el equipo móvil simplemente tendrá que construir las pantallas visuales y consumir el mismo Backend que ya construiste para la web original.</p>
+            
+            <h3>¿Qué tecnologías conforman cada parte?</h3>
+            <ul>
+                <li><strong>Frontend (El lado del cliente):</strong> Es todo lo que corre directamente en el navegador web del usuario. Utiliza tecnologías fundamentales como HTML, CSS y JavaScript, a menudo potenciadas por librerías o frameworks modernos como React, Angular, Vue o Svelte. Su responsabilidad principal es garantizar una buena interfaz de usuario (UI), una experiencia fluida (UX), validaciones visuales rápidas y la gestión del estado de la información en el navegador.</li>
+                <li><strong>Backend (El lado del servidor):</strong> Es el motor oculto que corre en un servidor en la nube. Involucra un lenguaje de programación fuerte (Node.js, Python, Java, C#, Go), un framework para agilizar tareas (Express, Django, Spring Boot) y un sistema de base de datos (PostgreSQL, MySQL, MongoDB). Su responsabilidad es la seguridad de todo el sistema, la autenticación de usuarios, la lógica compleja de negocio y asegurar la persistencia y coherencia de los datos a largo plazo.</li>
+            </ul>
+
+            <h3>La Barrera de Seguridad CORS</h3>
+            <p>Al tener el Frontend y el Backend separados físicamente o en distintos dominios, a menudo corren bajo diferentes URLs (por ejemplo, tu interfaz de React corre en <code>http://localhost:3000</code> mientras que tu servidor Node corre en <code>http://localhost:8080</code>). Los navegadores modernos implementan una estricta política de seguridad llamada <strong>CORS (Cross-Origin Resource Sharing)</strong> que bloquea peticiones automáticas entre orígenes distintos para evitar robos de datos. Para que la comunicación funcione, el desarrollador Backend debe configurar sus cabeceras (headers) de forma explícita permitiendo que el dominio exacto del Frontend pueda hacerle peticiones sin ser bloqueado.</p>
+
+            <h3>Comunicación Asíncrona con Fetch API</h3>
+            <p>Para conectar ambos mundos, el Frontend debe solicitar información realizando peticiones HTTP a través de internet. En el ecosistema de JavaScript moderno, esto se hace de manera nativa utilizando la API <code>Fetch</code>. Es crucial que estas peticiones sean asíncronas (usando Promesas o la sintaxis moderna <code>async/await</code>), para evitar que el navegador se congele y la interfaz quede bloqueada mientras se espera a que el servidor remoto responda a la petición.</p>
+            
+            <p>A continuación se muestra un ejemplo detallado de cómo un desarrollador Frontend moderno escribiría código asíncrono para leer datos y también para enviar nueva información (usando POST) hacia el Backend:</p>
+
+            <div class="code-block">
+                <span class="lang-tag">JavaScript</span>
+<pre><code><span class="cm">// 1. Función para consultar datos de usuarios (GET)</span>
+<span class="kw">async function</span> <span class="fn">obtenerUsuarios</span>() {
+  <span class="kw">try</span> {
+    <span class="cm">// Hacemos la petición a nuestra API y esperamos la respuesta</span>
+    <span class="kw">const</span> respuesta = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">'https://api.midominio.com/usuarios'</span>);
+    
+    <span class="cm">// Validamos si el servidor respondió con un error (ej. 404 o 500)</span>
+    <span class="kw">if</span> (!respuesta.ok) <span class="kw">throw new</span> <span class="fn">Error</span>(<span class="str">'Error crítico al obtener datos'</span>);
+    
+    <span class="cm">// Extraemos el cuerpo de la respuesta y lo convertimos a formato JSON</span>
+    <span class="kw">const</span> usuarios = <span class="kw">await</span> respuesta.<span class="fn">json</span>();
+    
+    <span class="cm">// Aquí actualizaríamos la UI (DOM o estado de React) con los datos</span>
+    console.<span class="fn">log</span>(<span class="str">'Usuarios recibidos:'</span>, usuarios);
+  } <span class="kw">catch</span> (error) {
+    console.<span class="fn">error</span>(<span class="str">'Ocurrió un problema de red:'</span>, error);
+  }
+}
+
+<span class="cm">// 2. Función para registrar un nuevo usuario en la base de datos (POST)</span>
+<span class="kw">async function</span> <span class="fn">registrarUsuario</span>(nuevoUsuario) {
+  <span class="kw">try</span> {
+    <span class="kw">const</span> respuesta = <span class="kw">await</span> <span class="fn">fetch</span>(<span class="str">'https://api.midominio.com/usuarios'</span>, {
+      method: <span class="str">'POST'</span>,
+      headers: { 
+        <span class="str">'Content-Type'</span>: <span class="str">'application/json'</span> 
+      },
+      body: JSON.<span class="fn">stringify</span>(nuevoUsuario) <span class="cm">// Convertimos el objeto JS a texto JSON</span>
+    });
+    
+    <span class="kw">const</span> resultado = <span class="kw">await</span> respuesta.<span class="fn">json</span>();
+    console.<span class="fn">log</span>(<span class="str">'¡Éxito! Usuario registrado en el servidor:'</span>, resultado);
+  } <span class="kw">catch</span> (error) {
+    console.<span class="fn">error</span>(<span class="str">'Error al intentar enviar los datos:'</span>, error);
+  }
+}</code></pre>
+            </div>
+
+            <p>Como puedes observar en el código superior, el formato de intercambio de información predilecto es <strong>JSON</strong> (JavaScript Object Notation). Esta es la lengua franca de la web actual, ya que es extremadamente ligera de transmitir por la red, muy legible para los humanos, e inmediatamente interpretable por JavaScript.</p>
+
+            <div class="post-nav">
+                <a href="#" data-nav="post1">← Anterior: API REST</a>
+                <a href="#" data-nav="home">Volver al Inicio</a>
+                <a href="#" data-nav="post3">Siguiente Artículo: Patrón MVC →</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- POST 3 PAGE -->
+    <main id="post3" class="page">
+        <header class="post-header">
+            <div class="post-header-inner">
+                <div class="card-tags" style="justify-content: center; margin-bottom: 1rem;">
+                    <span class="tag tag-purple">Patrones</span>
+                    <span class="tag tag-pink">MVC</span>
+                </div>
+                <h1>Patrón de Arquitectura MVC</h1>
+                <p class="lead">Entendiendo el Modelo-Vista-Controlador para estructurar código escalable y mantenible.</p>
+                <div class="post-meta">
+                    <div class="post-meta-item">
+                        <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Andrés Rodríguez" class="author-avatar" style="width: 24px; height: 24px;">
+                        <span>Andrés Rodríguez</span>
+                    </div>
+                    <div class="post-meta-item"><span>📅 05 May 2026</span></div>
+                    <div class="post-meta-item"><span>⏱️ 7 min de lectura</span></div>
+                </div>
+            </div>
+        </header>
+        <img src="https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=1200&q=80" alt="Código estructurado" class="post-hero-img">
+        <article class="post-content">
+            <h2>¿Qué es MVC?</h2>
+            <p>El patrón <strong>Modelo-Vista-Controlador (MVC)</strong> es una arquitectura de software fundamental que separa los datos y la lógica de negocio de una aplicación de su representación visual. Esta separación en tres componentes altamente interconectados ayuda a organizar el código y facilita un flujo de trabajo mucho más estructurado en equipos de desarrollo paralelo.</p>
+            <p>Al dividir responsabilidades en capas claras, el código resultante se vuelve mucho más modular, más fácil de probar mediante tests unitarios automatizados, y extremadamente escalable a medida que la complejidad del proyecto crece con el tiempo y se requieren nuevos requisitos funcionales.</p>
+            
+            <div class="info-box">
+                <p><strong>Dato histórico curioso:</strong> Aunque parezca una moda moderna, el patrón MVC fue concebido originalmente en el año 1979 por Trygve Reenskaug para la interfaz de usuario del lenguaje Smalltalk. Décadas después, sigue siendo la piedra angular indiscutible de frameworks web modernos de backend como Laravel (PHP), ASP.NET MVC (C#), Spring Boot (Java) y Ruby on Rails.</p>
+            </div>
+
+            <h3>Los 3 Componentes del MVC en Detalle</h3>
+            <p>Para entender verdaderamente cómo funciona, analicemos las responsabilidades estrictas de cada una de sus tres capas:</p>
+            
+            <h4>1. El Modelo (Model)</h4>
+            <p>Es el cerebro puro y el corazón de la aplicación. Su única responsabilidad es manejar los datos directamente, contener la lógica central de negocio y aplicar las reglas de validación necesarias (por ejemplo, asegurar que la contraseña de un nuevo usuario tenga más de 8 caracteres o verificar si existe suficiente inventario antes de permitir una compra). El Modelo es la única capa que "habla" con la base de datos (mediante consultas SQL o a través de un ORM). Críticamente, el Modelo ignora por completo cómo se van a visualizar estos datos en pantalla; es completamente ciego a la interfaz de usuario.</p>
+            
+            <h4>2. La Vista (View)</h4>
+            <p>Es la interfaz y exclusivamente lo que el usuario ve y con lo que interactúa en su pantalla. Su única responsabilidad es recibir información cruda y darle formato visual. Muestra los datos proporcionados por el Modelo (usualmente formateados usando HTML estructurado, estilos CSS y variables dinámicas en plantillas) y se encarga de capturar las acciones físicas del usuario (como clics en botones, desplazamientos del ratón o envíos de formularios en la página). La Vista se considera una capa "tonta", no debe contener lógica condicional compleja, bucles innecesarios ni cálculos matemáticos pesados.</p>
+            
+            <h4>3. El Controlador (Controller)</h4>
+            <p>Actúa como el intermediario esencial, el puente de comunicación o el director de orquesta entre la Vista y el Modelo. Su flujo de trabajo típico es de alta coordinación:</p>
+            <ol>
+                <li>Recibe una petición inicial del usuario proveniente de alguna interacción en la Vista (ejemplo: El usuario llenó un formulario para buscar un "iPhone").</li>
+                <li>Procesa esa entrada, verifica permisos básicos y le pide al Modelo que realice la acción requerida (ejemplo: "Busca productos en la base de datos que coincidan con la palabra 'iPhone'").</li>
+                <li>Toma la respuesta cruda que le devuelve el Modelo (un array de productos) y se la inyecta y entrega a una Vista específica para que esta última renderice el HTML resultante y se lo muestre de vuelta al usuario en el navegador.</li>
+            </ol>
+
+            <h3>El Ciclo de Vida de una Petición MVC Tradicional</h3>
+            <p>Cuando tú, como usuario final, escribes una URL en tu navegador e ingresas a un sitio web o aplicación basada rígidamente en MVC, el ciclo de vida de la información ocurre en fracciones de segundo y sigue este orden estricto: El <strong>Enrutador (Router)</strong> de la aplicación intercepta tu solicitud URL (ej. <code>/perfil</code>) y llama al <strong>Controlador</strong> correspondiente al perfil. Este Controlador invoca al <strong>Modelo</strong> de Usuario pidiéndole los datos de la cuenta actual. El Modelo consulta la base de datos PostgreSQL, obtiene los registros y le devuelve un objeto de datos crudos al Controlador. Finalmente, el Controlador toma esos datos y los inyecta en la <strong>Vista</strong> de Perfil, la cual compila un archivo HTML hermoso que es el que finalmente viaja a través de internet de regreso a tu navegador para que lo leas.</p>
+
+            <p>Aunque en el desarrollo de aplicaciones Frontend más modernas han surgido patrones arquitectónicos derivados e iteraciones diferentes (como MVP, MVVM o arquitecturas de flujo unidireccional como Flux/Redux para librerías como React o Vue), el concepto central de separar estrictamente los datos de la presentación visual, propuesto originalmente por el pionero MVC, sigue siendo una ley inquebrantable de la buena y limpia ingeniería de software actual.</p>
+
+            <div class="post-nav">
+                <a href="#" data-nav="post2">← Anterior: Frontend y Backend</a>
+                <a href="#" data-nav="home">Volver al Inicio</a>
+                <a href="#" data-nav="post4">Siguiente Artículo: HTML5 →</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- POST 4 PAGE -->
+    <main id="post4" class="page">
+        <header class="post-header">
+            <div class="post-header-inner">
+                <div class="card-tags" style="justify-content: center; margin-bottom: 1rem;">
+                    <span class="tag tag-cyan">Frontend</span>
+                    <span class="tag tag-purple">Estructura</span>
+                </div>
+                <h1>Lenguaje de marcado HTML 5</h1>
+                <p class="lead">Entendiendo la base fundamental de toda la World Wide Web y su evolución semántica.</p>
+                <div class="post-meta">
+                    <div class="post-meta-item">
+                        <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Andrés Rodríguez" class="author-avatar" style="width: 24px; height: 24px;">
+                        <span>Andrés Rodríguez</span>
+                    </div>
+                    <div class="post-meta-item"><span>📅 20 May 2026</span></div>
+                    <div class="post-meta-item"><span>⏱️ 5 min de lectura</span></div>
+                </div>
+            </div>
+        </header>
+        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&fit=crop&w=1200&q=80" alt="Código HTML" class="post-hero-img">
+        <article class="post-content">
+            <h2>¿Qué es HTML5?</h2>
+            <p><strong>HTML</strong> (HyperText Markup Language) es el lenguaje estándar utilizado para crear y estructurar el contenido de las páginas web. La versión <strong>HTML5</strong> es la quinta y más importante revisión de este estándar, la cual introdujo una gran cantidad de características nuevas diseñadas para satisfacer las demandas de las aplicaciones web modernas.</p>
+            <p>A diferencia de lenguajes de programación como JavaScript o Python, HTML no tiene lógica condicional (como <code>if</code> o <code>else</code>) ni bucles. Es puramente declarativo: tú escribes etiquetas (tags) para indicarle al navegador qué tipo de contenido debe mostrar.</p>
+            
+            <div class="info-box">
+                <p><strong>El concepto de Hipertexto:</strong> La palabra "HyperText" se refiere a enlaces (links) que conectan páginas web entre sí. Esta red interconectada es lo que da lugar al concepto de la "World Wide Web" (WWW).</p>
+            </div>
+
+            <h3>La Importancia de la Semántica</h3>
+            <p>Una de las mayores revoluciones de HTML5 fue la introducción de <strong>etiquetas semánticas</strong>. Anteriormente, los desarrolladores estructuraban sus páginas usando montones de etiquetas <code>&lt;div&gt;</code> genéricas. HTML5 introdujo etiquetas con significado específico, como:</p>
+            <ul>
+                <li><code>&lt;header&gt;</code>: Para la cabecera del sitio o de una sección.</li>
+                <li><code>&lt;nav&gt;</code>: Para contener los enlaces de navegación principales.</li>
+                <li><code>&lt;article&gt;</code>: Para contenido independiente y autónomo, como un post de un blog.</li>
+                <li><code>&lt;section&gt;</code>: Para agrupar contenido temático dentro de un documento.</li>
+                <li><code>&lt;footer&gt;</code>: Para el pie de página.</li>
+            </ul>
+
+            <p>Usar etiquetas semánticas no solo hace que el código sea más legible para otros programadores, sino que es fundamental para el <strong>SEO</strong> (Search Engine Optimization) y para la accesibilidad, permitiendo que los lectores de pantalla para personas con discapacidad visual puedan interpretar correctamente la estructura de tu página.</p>
+
+            <h3>Nuevas APIs de HTML5</h3>
+            <p>HTML5 no es solo etiquetas. Vino acompañado de potentes APIs que permitieron hacer directamente en el navegador cosas que antes requerían plugins pesados como Flash. Algunas de las más destacadas son la etiqueta <code>&lt;video&gt;</code> y <code>&lt;audio&gt;</code>, la API de Geolocation, y el elemento <code>&lt;canvas&gt;</code> para dibujar gráficos interactivos y juegos.</p>
+
+            <div class="post-nav">
+                <a href="#" data-nav="post3">← Anterior: Patrón MVC</a>
+                <a href="#" data-nav="home">Volver al Inicio</a>
+                <a href="#" data-nav="post5">Siguiente Artículo: CSS →</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- POST 5 PAGE -->
+    <main id="post5" class="page">
+        <header class="post-header">
+            <div class="post-header-inner">
+                <div class="card-tags" style="justify-content: center; margin-bottom: 1rem;">
+                    <span class="tag tag-pink">Diseño</span>
+                    <span class="tag tag-cyan">Frontend</span>
+                </div>
+                <h1>Introducción a hojas de estilo CSS</h1>
+                <p class="lead">Descubre cómo transformar el esqueleto HTML en una experiencia visual rica e interactiva.</p>
+                <div class="post-meta">
+                    <div class="post-meta-item">
+                        <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Andrés Rodríguez" class="author-avatar" style="width: 24px; height: 24px;">
+                        <span>Andrés Rodríguez</span>
+                    </div>
+                    <div class="post-meta-item"><span>📅 25 May 2026</span></div>
+                    <div class="post-meta-item"><span>⏱️ 6 min de lectura</span></div>
+                </div>
+            </div>
+        </header>
+        <img src="https://images.unsplash.com/photo-1507721999472-8ed4421c4af2?auto=format&fit=crop&w=1200&q=80" alt="Diseño CSS" class="post-hero-img">
+        <article class="post-content">
+            <h2>¿Qué es CSS?</h2>
+            <p><strong>CSS</strong> (Cascading Style Sheets, u Hojas de Estilo en Cascada) es el lenguaje de diseño utilizado para describir cómo se debe presentar visualmente un documento escrito en HTML. Si HTML es el esqueleto que sostiene la página, CSS es la piel, el maquillaje y la ropa que la hace verse bien.</p>
+            <p>Con CSS puedes controlar casi todos los aspectos visuales: los colores, las fuentes, el tamaño del texto, la separación entre elementos, cómo estos se distribuyen en columnas, e incluso puedes agregar complejas animaciones y transiciones (como los efectos al pasar el ratón en este blog).</p>
+            
+            <div class="info-box">
+                <p><strong>¿Por qué "en cascada"?</strong> El nombre hace referencia a la forma en que se aplican las reglas. Si existen dos reglas contradictorias aplicadas al mismo elemento, el navegador decide cuál gana usando un sistema de cascada basado en la herencia y la especificidad.</p>
+            </div>
+
+            <h3>Sintaxis Básica</h3>
+            <p>Las reglas de CSS constan de un <strong>selector</strong> (para indicar a qué elemento de HTML queremos aplicar el estilo) y un bloque de declaración encerrado en llaves que contiene una o múltiples propiedades con sus respectivos valores:</p>
+
+            <div class="code-block">
+                <span class="lang-tag">CSS</span>
+<pre><code><span class="cm">/* Selector de clase (.btn) */</span>
+<span class="kw">.btn</span> {
+  <span class="kw">background-color</span>: <span class="str">#7c3aed</span>;
+  <span class="kw">color</span>: <span class="str">#ffffff</span>;
+  <span class="kw">border-radius</span>: <span class="str">8px</span>;
+  <span class="kw">padding</span>: <span class="str">10px 20px</span>;
+}</code></pre>
+            </div>
+
+            <h3>Diseño Responsivo (Responsive Design)</h3>
+            <p>Uno de los mayores desafíos del desarrollo web moderno es lograr que una página se vea perfecta tanto en un monitor gigante de 32 pulgadas como en la pequeña pantalla de un teléfono móvil. Aquí es donde brilla el CSS moderno.</p>
+            <p>Gracias a las <strong>Media Queries</strong> (<code>@media</code>), podemos indicarle al navegador que cambie el diseño, esconda elementos o altere tamaños de fuente dependiendo del ancho actual de la pantalla. Además, sistemas de diseño como <strong>Flexbox</strong> y <strong>CSS Grid</strong> nos permiten crear diseños líquidos y complejos en dos dimensiones con unas pocas líneas de código, algo que antes era prácticamente imposible.</p>
+
+            <h3>La Evolución: Preprocesadores y Frameworks</h3>
+            <p>A medida que los proyectos web crecen, escribir CSS puro puede volverse difícil de mantener. Por eso han surgido herramientas como <strong>Sass</strong> o <strong>Less</strong>, que añaden variables y anidación al lenguaje. Asimismo, librerías modernas de "utilidades" como <strong>Tailwind CSS</strong> o enfoques como <strong>CSS-in-JS</strong> (usado en React) están revolucionando la forma en que pensamos sobre los estilos, haciéndolo más modular y predecible.</p>
+
+            <div class="post-nav">
+                <a href="#" data-nav="post4">← Anterior: HTML5</a>
+                <a href="#" data-nav="home">Volver al Inicio</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- ABOUT PAGE -->
+    <main id="about" class="page">
+        <section class="about-section">
+            <div class="author-profile">
+                <img src="https://avatars.githubusercontent.com/u/124216395?s=400&u=eeda334aacd9e635cf688c2282c9d60fcad35257&v=4" alt="Andrés Rodríguez">
+                <div class="author-info">
+                    <h2>Hola, soy Andrés Rodríguez 👋</h2>
+                    <div class="role"> Full Stack Developer 💻 </div>
+                    <p>Con más de 3 años de experiencia desarrollando aplicaciones web modernas y escalables. Especializado en JavaScript y ecosistema Full Stack, trabajando tanto en frontend como backend con tecnologías como React, Redux, Node.js, Express.js, Python y PostgreSQL.</p>
+                    <br>
+                    <p>Experiencia construyendo interfaces dinámicas, APIs REST, integración de bases de datos y desarrollo de soluciones enfocadas en rendimiento, mantenibilidad y buena experiencia de usuario. Acostumbrado a trabajar en entornos ágiles, colaborando con equipos multidisciplinarios y participando en todo el ciclo de desarrollo de software.</p>
+                </div>
+            </div>
+
+            <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.5rem;">Mis Tecnologías Favoritas</h3>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <div class="skill-name">HTML5 & CSS3</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">⚡</div>
+                    <div class="skill-name">JavaScript Moderno</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📦</div>
+                    <div class="skill-name">Node.js</div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🔌</div>
+                    <div class="skill-name">RESTful APIs</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-logo">TechBlog</div>
+        <div class="footer-links">
+            <a href="#" data-nav="home">Inicio</a>
+            <a href="#" data-nav="about">Sobre Mí</a>
+            <a href="https://github.com" target="_blank">GitHub</a>
+        </div>
+        <div class="footer-copy">
+            &copy; <span id="year"></span> Proyecto Educativo de Integración de Aplicaciones. Desarrollado con 💜.
+        </div>
+    </footer>
+
+    <!-- MAIN JS SCRIPT -->
+    <script src="js/main.js"></script>
+</body>
+</html>
