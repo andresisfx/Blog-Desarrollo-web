@@ -54,11 +54,3 @@ Al ser una aplicación puramente estática, no requiere compilación (build step
    - Simplemente abre el archivo `index.html` en cualquier navegador moderno.
    - Alternativamente, para una experiencia de desarrollo óptima, puedes usar la extensión **Live Server** en VS Code o cualquier servidor estático ligero (`npx serve .`).
 
-## 👨‍💻 Autor
-
-**Andrés Rodríguez**
-*Full Stack Developer*
-
-Especializado en JavaScript y el ecosistema Full Stack, con experiencia construyendo interfaces dinámicas, APIs REST, integración de bases de datos y desarrollo de soluciones enfocadas en el rendimiento y mantenibilidad.
-
-[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/andresisfx)
