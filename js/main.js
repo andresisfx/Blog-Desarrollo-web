@@ -1,6 +1,6 @@
 /* ===== BLOG - MAIN.JS ===== */
 
-// ── Page Router ──────────────────────────────────────────────
+// ── Enrutador de páginas ─────────────────────────────────────
 const pages = document.querySelectorAll('.page');
 const navLinks = document.querySelectorAll('[data-page]');
 
@@ -14,10 +14,10 @@ function navigateTo(pageId, fromSearch = false) {
   navLinks.forEach(l => {
     l.classList.toggle('active', l.dataset.page === pageId);
   });
-  // Update URL hash
+  // Actualizar hash de la URL
   history.pushState({ page: pageId }, '', '#' + pageId);
 
-  // Clear search on navigation
+  // Limpiar búsqueda al navegar
   if (!fromSearch) {
     const searchInput = document.getElementById('navSearchInput');
     if (searchInput) {
@@ -27,39 +27,39 @@ function navigateTo(pageId, fromSearch = false) {
   }
 }
 
-// Handle browser back/forward
+// Manejar botones atrás/adelante del navegador
 window.addEventListener('popstate', e => {
   const page = (e.state && e.state.page) || 'home';
   navigateTo(page);
 });
 
-// ── Nav links ─────────────────────────────────────────────────
+// ── Enlaces de navegación ─────────────────────────────────────
 navLinks.forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
     navigateTo(link.dataset.page);
-    // Close mobile menu
+    // Cerrar menú móvil
     document.getElementById('navList').classList.remove('open');
   });
 });
 
-// ── Hamburger menu ────────────────────────────────────────────
+// ── Menú hamburguesa ──────────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navList = document.getElementById('navList');
 hamburger.addEventListener('click', () => navList.classList.toggle('open'));
 
-// ── Sticky navbar style ───────────────────────────────────────
+// ── Estilo de barra de navegación fija ────────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 30);
 });
 
-// ── Card click → post page ────────────────────────────────────
+// ── Clic en tarjeta → página de publicación ───────────────────
 document.querySelectorAll('[data-goto]').forEach(el => {
   el.addEventListener('click', () => navigateTo(el.dataset.goto));
 });
 
-// ── "Read more" / "back" buttons ─────────────────────────────
+// ── Botones "Leer más" / "volver" ─────────────────────────────
 document.querySelectorAll('[data-nav]').forEach(btn => {
   btn.addEventListener('click', e => {
     e.preventDefault();
@@ -67,7 +67,7 @@ document.querySelectorAll('[data-nav]').forEach(btn => {
   });
 });
 
-// ── Search bar filter ─────────────────────────────────────────
+// ── Filtro de barra de búsqueda ───────────────────────────────
 const navSearchInput = document.getElementById('navSearchInput');
 
 function performSearch(q) {
@@ -109,7 +109,7 @@ if (navSearchInput) {
   });
 }
 
-// ── Scroll-reveal cards ───────────────────────────────────────
+// ── Tarjetas con revelado al hacer scroll ─────────────────────
 const revealObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -126,10 +126,10 @@ document.querySelectorAll('.blog-card, .skill-card').forEach(card => {
   revealObserver.observe(card);
 });
 
-// ── Init: load page from hash ─────────────────────────────────
+// ── Inicio: cargar página desde el hash ───────────────────────
 const initialPage = location.hash.replace('#', '') || 'home';
 navigateTo(initialPage);
 
-// ── Current year in footer ────────────────────────────────────
+// ── Año actual en el pie de página ────────────────────────────
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
